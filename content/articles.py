@@ -313,4 +313,97 @@ ARTICLES = [
 <h2>Why it matters</h2>
 <p>With these details the right vehicle can be matched in advance, rather than finding out at the door that the chair does not fit. Send us the details on WhatsApp and we will tell you what suits.</p>
 """}},
+{
+"slug": "haifa-to-ben-gurion-drive-time", "date": "2026-11-16",
+"service_he": "/hasaot-haifa", "service_en": "/ben-gurion-airport-transfers",
+"he": {
+"title": "מחיפה לנתב\"ג: כמה זמן לוקחת הנסיעה ומתי לצאת",
+"desc": "זמן הנסיעה מחיפה לנתב\"ג, איך מחשבים שעת איסוף לפי שעת הטיסה, ומה לעשות בשעות עומס, בלילה ובנחיתה.",
+"body": """
+<p>מחיפה לנתב\"ג יש כ-100 ק\"מ. זו אחת הנסיעות הארוכות לשדה מערי המרכז והצפון, ולכן הטעויות בה יקרות יותר: יציאה מאוחרת בחצי שעה יכולה להפוך בוקר רגוע לריצה בטרמינל. במאמר הזה נעבור על זמני הנסיעה, על חישוב שעת האיסוף ועל כמה מצבים שכדאי להכיר מראש.</p>
+<h2>כמה זמן לוקחת הנסיעה</h2>
+<p>בלי עומס, הנסיעה מחיפה לנתב\"ג אורכת בערך שעה ורבע עד שעה וחצי. הזמן תלוי בנקודת האיסוף: מהכרמל, מהעיר התחתית, מהקריות או מנמל חיפה, כל כתובת מוסיפה או מורידה כמה דקות עד שעולים על הכביש המהיר.</p>
+<p>בשעות עומס זה כבר סיפור אחר. בבוקר של יום חול, בכניסה לאזור המרכז, וגם בימי חמישי אחר הצהריים ובערבי חג, הנסיעה יכולה להתארך במידה ניכרת. אין מספר קבוע לכך, ולכן כדאי לבדוק את מצב התנועה ביום הנסיעה באפליקציית ניווט, ולא להסתמך רק על הזמן \"הרגיל\".</p>
+<h2>איך מחשבים את שעת האיסוף</h2>
+<p>לטיסות בינלאומיות מקובל להגיע לטרמינל כשלוש שעות לפני ההמראה. מחיפה, החישוב נראה כך:</p>
+<ol>
+<li>מתחילים משעת ההמראה ומורידים שלוש שעות. זו שעת ההגעה לטרמינל.</li>
+<li>מורידים את זמן הנסיעה: שעה וחצי.</li>
+<li>מוסיפים מרווח לפקקים. בשעות עומס, מרווח של חצי שעה ויותר הוא לא מוגזם.</li>
+</ol>
+<p>דוגמה: טיסה ב-11:00. הגעה לטרמינל עד 08:00. נסיעה של שעה וחצי מביאה ל-06:30, ומכיוון שזו שעת עומס של בוקר, איסוף בסביבות 06:00 משאיר מרווח סביר.</p>
+<p>בטיסות לילה ובטיסות מוקדמות מאוד, הכבישים בדרך כלל פנויים יותר, ואפשר לצמצם מעט את המרווח. גם אז כדאי להשאיר כמה דקות לעצירה בדרך, אם יש ילדים או מבוגרים ברכב.</p>
+<h2>מה לשלוח כשמזמינים</h2>
+<ul>
+<li>תאריך, שעת טיסה ומספר טיסה.</li>
+<li>כתובת איסוף מדויקת בחיפה או בקריות, כולל שם בניין או מלון.</li>
+<li>טרמינל 1 או טרמינל 3. חשוב לציין בהזמנה.</li>
+<li>מספר נוסעים ומספר מזוודות גדולות, עגלות או כיסא גלגלים.</li>
+</ul>
+<p>מומלץ להזמין כ-24 שעות מראש, כדי שהרכב המבוקש יישמר. בנסיעה ארוכה כזו כדאי לתאם עוד קודם, במיוחד בעונות עמוסות ובחגים.</p>
+<h2>טיפים לבוקר הנסיעה</h2>
+<ul>
+<li>ארזו את המזוודות ערב קודם, והשאירו ליד הדלת את הדרכונים, הטלפון והמטען.</li>
+<li>היו מוכנים למטה כמה דקות לפני שעת האיסוף. הנהג עוזר בטעינת המזוודות, אבל כל דקה של המתנה נגרעת מהמרווח.</li>
+<li>אם משהו משתנה, למשל שעת הטיסה זזה או מצטרף נוסע, עדכנו בוואטסאפ מוקדם ככל האפשר, כדי שאפשר יהיה להתאים את שעת האיסוף או את הרכב.</li>
+<li>אם אתם טסים עם ילדים קטנים, ציינו בהזמנה אם צריך כיסא תינוק או בוסטר.</li>
+</ul>
+<h2>הכיוון ההפוך: מנתב\"ג לחיפה</h2>
+<p>בנחיתה, שלחו מספר טיסה בהזמנה. הנהג עוקב אחרי שעת הנחיתה בפועל, כך שגם כשהטיסה מתעכבת או מקדימה, הוא מגיע בהתאם. אחרי הנחיתה, שלחו הודעה קצרה בוואטסאפ כשאתם יוצאים עם המזוודות. אחרי טיסה ארוכה, שעה וחצי של נסיעה ברכב פרטי ונוח עדיפה בהרבה על החלפת אמצעי תחבורה עם מזוודות.</p>
+<p>השירות פועל 24/7, כולל לילות, שבתות וחגים, כך שגם נחיתה אחרי חצות לא משאירה אתכם בלי דרך הביתה.</p>
+<h2>איזה רכב לבחור</h2>
+<p>בנסיעה ארוכה, הנוחות חשובה יותר מאשר בנסיעה קצרה. זוג או נוסע עסקי מסתדרים במונית של 4 מקומות. משפחה עם מזוודות תרגיש טוב יותר בוואן של 6 או 7 מקומות, עם יותר מקום לרגליים ולמטען. לקבוצה, למשל משלחת או צוות עבודה שטס יחד, יש <a href=\"/minibus-hashara\">מיניבוס של 16, 19 או 22 מקומות</a>.</p>
+<h2>בקצרה</h2>
+<ol>
+<li>מחיפה לנתב\"ג: כ-100 ק\"מ, שעה ורבע עד שעה וחצי בלי עומס.</li>
+<li>שעת איסוף: שלוש שעות לפני הטיסה, פחות זמן הנסיעה, ועוד מרווח לפקקים.</li>
+<li>שלחו מספר טיסה, טרמינל, נוסעים ומזוודות.</li>
+</ol>
+<p>לפרטים נוספים על <a href=\"/hasaot-haifa\">הסעות מחיפה</a> ועל <a href=\"/hasaot-menatbag\">הסעות מנתב\"ג</a>, או להזמנה בטלפון ובוואטסאפ: 054-283-1111.</p>
+"""},
+"en": {
+"title": "Haifa to Ben Gurion Airport: how long the drive takes and when to leave",
+"desc": "Drive time from Haifa to Ben Gurion Airport, how to work out a pickup time from your flight, and tips for rush hour and late arrivals.",
+"body": """
+<p>Haifa is about 100 km from Ben Gurion Airport. That makes it one of the longer airport runs from Israel's main cities, and mistakes cost more: leaving half an hour late can turn a calm morning into a sprint through the terminal. Here is what to know about drive times, working out a pickup time, and a few situations worth planning for.</p>
+<h2>How long the drive takes</h2>
+<p>Without traffic, the drive from Haifa to the airport takes roughly an hour and a quarter to an hour and a half. It depends on where you are picked up: Mount Carmel, downtown, the Krayot or Haifa port each add or save a few minutes before you reach the highway.</p>
+<p>At busy times it is a different story. Weekday mornings heading into central Israel, Thursday afternoons and holiday eves can make the drive noticeably longer. There is no fixed figure, so check the traffic on the day in a navigation app rather than relying on the \"usual\" time alone.</p>
+<h2>How to work out your pickup time</h2>
+<p>For international flights the usual advice is to be at the terminal about three hours before take-off. From Haifa, the calculation looks like this:</p>
+<ol>
+<li>Start from the departure time and subtract three hours. That is when you should reach the terminal.</li>
+<li>Subtract the drive: an hour and a half.</li>
+<li>Add a margin for traffic. At rush hour, half an hour or more is not excessive.</li>
+</ol>
+<p>Example: an 11:00 flight. Be at the terminal by 08:00. An hour and a half on the road brings you to 06:30, and since that is morning rush hour, a pickup around 06:00 leaves a reasonable margin.</p>
+<p>For night flights and very early departures the roads are usually clearer, so the margin can be a little smaller. Even then, allow a few minutes for a stop on the way if children or older passengers are travelling.</p>
+<h2>What to send when booking</h2>
+<ul>
+<li>Date, flight time and flight number.</li>
+<li>The exact pickup address in Haifa or the Krayot, including building or hotel name.</li>
+<li>Terminal 1 or Terminal 3. Please mention it when booking.</li>
+<li>Number of passengers and of large suitcases, strollers or a wheelchair.</li>
+</ul>
+<p>Booking about 24 hours ahead is recommended so the vehicle you want is held. For a long ride like this one it is worth arranging earlier still, especially in busy seasons and around Jewish holidays.</p>
+<h2>Tips for the morning of the trip</h2>
+<ul>
+<li>Pack the night before, and leave passports, phone and charger by the door.</li>
+<li>Be ready downstairs a few minutes before the pickup time. The driver helps load the suitcases, but every minute of waiting comes out of your margin.</li>
+<li>If anything changes, for example the flight time moves or another passenger joins, update us on WhatsApp as early as possible so the pickup time or vehicle can be adjusted.</li>
+<li>Travelling with young children? Mention in the booking if you need a baby seat or booster.</li>
+</ul>
+<h2>The other way: from the airport to Haifa</h2>
+<p>When you are landing, include your flight number in the booking. The driver follows the actual landing time, so whether the flight is delayed or early, the pickup adjusts. Once you are out with your bags, send a short WhatsApp message. After a long flight, an hour and a half in a comfortable private vehicle beats changing trains and buses with suitcases.</p>
+<p>The service runs 24/7, including nights, Shabbat and holidays, so a landing after midnight does not leave you without a ride north.</p>
+<h2>Which vehicle to choose</h2>
+<p>On a long drive comfort matters more than on a short one. A couple or a business traveller is fine in a 4-seat taxi. A family with luggage will be more comfortable in a 6 or 7 seat van, with more legroom and boot space. For a group, such as a delegation or a team flying together, there is a <a href=\"/19-passenger-minibus-israel\">16, 19 or 22 seat minibus</a>.</p>
+<h2>In short</h2>
+<ol>
+<li>Haifa to Ben Gurion: about 100 km, an hour and a quarter to an hour and a half without traffic.</li>
+<li>Pickup time: three hours before the flight, minus the drive, plus a margin for traffic.</li>
+<li>Send the flight number, terminal, passengers and luggage.</li>
+</ol>
+<p>Read more about our <a href=\"/ben-gurion-airport-transfers\">Ben Gurion Airport transfers</a> and <a href=\"/private-driver-israel\">private drivers in Israel</a>, or book by phone or WhatsApp: +972-54-283-1111.</p>
+"""}},
 ]
