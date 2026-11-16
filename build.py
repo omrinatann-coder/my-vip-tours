@@ -52,7 +52,22 @@ ICONS = {
     "phone": '<path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/>',
     "wa": '<path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/>',
     "star": '<path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/>',
+    "pin": '<path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>',
+    "clock": '<path fill-rule="evenodd" d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm-1 3h2v5.4l3.5 2.1-1 1.7L11 13.6z"/>',
+    "user": '<path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-4.4 0-8 2.2-8 5v3h16v-3c0-2.8-3.6-5-8-5z"/>',
+    "bus": '<path d="M4 16c0 .9.4 1.7 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8c.6-.5 1-1.3 1-2.2V6c0-3.5-3.6-4-8-4S4 2.5 4 6zm3.5 1a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm9 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM18 11H6V6h12z"/>',
 }
+
+IMG_DIR = ROOT / "assets" / "img"
+
+
+def photo(name, alt, fallback_icon):
+    """Card photo from assets/img/<name>.(webp|jpg|jpeg|png); dark placeholder with an icon if it is missing."""
+    for ext in ("webp", "jpg", "jpeg", "png"):
+        if (IMG_DIR / f"{name}.{ext}").exists():
+            return (f'<img src="/assets/img/{name}.{ext}" alt="{E(alt)}" loading="lazy" decoding="async"'
+                    ' width="800" height="500">')
+    return f'<span class="ph-icon">{icon(fallback_icon)}</span>'
 
 
 def icon(name, cls="ic"):
@@ -258,9 +273,10 @@ def fleet_cards(lang, ids=None):
     out = []
     for v in vs:
         seats = f'{v["seats"]} {t(lang, "seats")}' if v["seats"] else t(lang, "seats_ask")
-        out.append(f'<li class="card"><b class="seats">{E(seats)}</b><h3>{E(v[lang]["name"])}</h3>'
-                   f'<p>{E(v[lang]["desc"])}</p></li>')
-    return f'<ul class="cards">{"".join(out)}</ul>'
+        out.append(f'<li class="pcard"><div class="ph">{photo("fleet-" + v["id"], v[lang]["name"], "bus")}'
+                   f'<div class="cap"><h3>{E(v[lang]["name"])}</h3><span>{icon("user")} {E(seats)}</span></div></div>'
+                   f'<p class="pbody">{E(v[lang]["desc"])}</p></li>')
+    return f'<ul class="cards pcards">{"".join(out)}</ul>'
 
 
 def page_cards(paths):
@@ -300,18 +316,34 @@ def faq_block(path):
     return f'<section class="sec"><h2>{t(lang, "faq_title")}</h2>{body}</section>', faq_ld(items)
 
 
+ROUTES_HE = [("/hasaot-yerushalayim", "ירושלים"), ("/hasaot-tel-aviv", "תל אביב"), ("/hasaot-haifa", "חיפה"),
+             ("/hasaot-netanya", "נתניה"), ("/hasaot-beer-sheva", "באר שבע"), ("/hasaot-ashdod", "אשדוד"),
+             ("/hasaot-rishon-lezion", "ראשון לציון"), ("/hasaot-petah-tikva", "פתח תקווה")]
+
+
+def routes_block(lang):
+    """Dark airport-routes band, as on the Base44 home page. Hebrew only: the city pages are in Hebrew."""
+    if lang != "he":
+        return ""
+    pills = "".join(f'<a class="pill" href="{h}">{E(n)}</a>' for h, n in ROUTES_HE)
+    return (f'<section class="routes"><div class="wrap"><span class="tile">{icon("plane")}</span>'
+            '<h2>הסעות מנתב"ג</h2><p>איסוף מנתב"ג לכל עיר בארץ, 24/7, עם מעקב אחרי הטיסה.</p>'
+            f'<nav class="pills" aria-label="הסעות לפי עיר">{pills}</nav>'
+            '<a class="btn" href="/hasaot-menatbag">לכל ההסעות מנתב"ג</a></div></section>')
+
+
 def tour_block(lang):
     cards = []
     for tr in TOURS:
         name = tr[f"name_{lang}"]
-        hl = "".join(f"<li>{E(h)}</li>" for h in tr[f"highlights_{lang}"])
-        price = tr.get("price_he") if lang == "he" else ""
-        meta = f'<p class="tour-meta">{t(lang, "duration")}: {E(tr[f"duration_{lang}"])}'
-        meta += f' · {t(lang, "price")}: {E(price)}</p>' if price else "</p>"
+        hl = "".join(f"<li>{icon('pin')} {E(h)}</li>" for h in tr[f"highlights_{lang}"])
         link = tr.get("page_he") if lang == "he" else ""
         title = f'<a href="{link}">{E(name)}</a>' if link else E(name)
-        cards.append(f'<li class="card tour" id="tour-{E(tr["id"])}"><h3>{title}</h3>{meta}<ul class="hl">{hl}</ul></li>')
-    return f'<section class="sec"><h2>{t(lang, "tours_title")}</h2><ul class="cards">{"".join(cards)}</ul></section>'
+        cards.append(f'<li class="pcard tour" id="tour-{E(tr["id"])}"><div class="ph">{photo("tour-" + tr["id"], name, "pin")}'
+                     f'<div class="cap"><h3>{title}</h3><span>{icon("clock")} {E(tr[f"duration_{lang}"])}</span></div></div>'
+                     f'<div class="pbody"><ul class="pins">{hl}</ul><a class="btn go" href="#book">{t(lang, "book")}</a></div></li>')
+    return (f'<section class="sec c"><h2>{t(lang, "tours_title")}</h2>'
+            f'<ul class="cards pcards">{"".join(cards)}</ul></section>')
 
 
 def crumbs_html(crumbs):
@@ -411,9 +443,10 @@ def home(lang):
         banner = (f'<div class="banner"><img src="/assets/img/hero-banner.webp" alt="{E(alt)}" '
                   'width="1536" height="1024" fetchpriority="high"></div>')
     main = (banner + hero(lang, p["h1"], p["lead"])
-            + f'<section class="wrap sec"><h2>{t(lang, "services")}</h2>{page_cards(featured)}</section>'
+            + f'<section class="wrap sec c"><h2>{t(lang, "services")}</h2>{page_cards(featured)}</section>'
             + f'<div class="wrap">{tour_block(lang)}</div>'
-            + f'<section class="wrap sec"><h2>{t(lang, "fleet")}</h2>{fleet_cards(lang)}</section>'
+            + f'<section class="wrap sec c"><h2>{t(lang, "fleet")}</h2>{fleet_cards(lang)}</section>'
+            + routes_block(lang)
             + review_block(lang)
             + (f'<div class="wrap">{faq_html}</div>' if faq_html else "")
             + f'<section class="wrap sec"><h2>{t(lang, "articles")}</h2>{page_cards(arts)}</section>')
