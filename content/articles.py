@@ -1,4 +1,8 @@
-"""Articles. URL: /articles/<slug> (Hebrew) and /en/articles/<slug> (English)."""
+"""Articles. URL: /blog/<slug> (Hebrew) and /en/blog/<slug> (English).
+
+Each article: slug, date, and the service page it promotes, either
+"service": <key of ARTICLE_SERVICE in build.py> or "service_he"/"service_en": page paths.
+New weekly articles are appended at the end (see docs/weekly-article.md)."""
 
 ARTICLES = [
 {

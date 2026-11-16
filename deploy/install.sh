@@ -11,5 +11,6 @@ bash "$APP/deploy/update.sh"
 install -m 644 "$APP/deploy/nginx-my-vip-tours.conf" /etc/nginx/sites-available/my-vip-tours
 ln -sf /etc/nginx/sites-available/my-vip-tours /etc/nginx/sites-enabled/my-vip-tours
 nginx -t && systemctl reload nginx
+install -m 644 "$APP/deploy/my-vip-tours.cron" /etc/cron.d/my-vip-tours
 echo "Installed. Test before DNS:  curl -sI -H 'Host: my-vip-tours.com' http://127.0.0.1/ben-gurion-airport-transfers"
 echo "After the DNS switch:       sudo bash $APP/deploy/https.sh you@example.com"

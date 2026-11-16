@@ -1,0 +1,2 @@
+# /etc/cron.d/my-vip-tours: publish new commits (weekly articles) within 30 minutes
+*/30 * * * * root bash /opt/my-vip-tours/deploy/update.sh >> /var/log/my-vip-tours-update.log 2>&1

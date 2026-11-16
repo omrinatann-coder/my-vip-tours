@@ -493,7 +493,8 @@ def build_pages():
             p = {"path": path, "lang": lang, "alt": alt, "nav": x["title"], "title": f'{x["title"]} | {B.BRAND}',
                  "desc": x["desc"], "h1": x["title"], "lead": x["desc"], "group": "article"}
             register(p)
-            articles.append((p, x["body"], a.get("modified", a["date"]), ARTICLE_SERVICE[a["service"]][lang]))
+            svc = ARTICLE_SERVICE[a["service"]][lang] if "service" in a else a[f"service_{lang}"]
+            articles.append((p, x["body"], a.get("modified", a["date"]), svc))
     for k in KEPT_ARTICLES:
         p = {"path": k["path"], "lang": k["lang"], "alt": None, "nav": k["title"], "title": f'{k["title"]} | {B.BRAND}',
              "desc": k["desc"], "h1": k["title"], "lead": k["desc"], "group": "article"}
@@ -506,6 +507,7 @@ def build_pages():
     home("en")
     fleet_page(SITE["/fleet"])
     fleet_page(SITE["/en/fleet"])
+    articles.sort(key=lambda a: a[2], reverse=True)  # newest first
     for lang, blog in (("he", "/blog"), ("en", "/en/blog")):
         posts = [a[0]["path"] for a in articles if a[0]["lang"] == lang]
         blog_index(SITE[blog], posts)
