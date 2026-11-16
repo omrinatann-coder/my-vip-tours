@@ -1,1 +1,27 @@
-[]
+[
+  {"id": "jerusalem", "page_he": "/siur-yerushalayim",
+   "name_he": "סיור בירושלים", "name_en": "Jerusalem Tour", "duration_he": "יום שלם", "duration_en": "Full Day", "price_he": "",
+   "highlights_he": ["הכותל המערבי", "הר הזיתים", "העיר העתיקה"], "highlights_en": ["Western Wall", "Mount of Olives", "Old City"]},
+  {"id": "dead_sea", "page_he": "/tiyul-yam-hamelach",
+   "name_he": "ים המלח ומצדה", "name_en": "Dead Sea & Masada", "duration_he": "יום שלם", "duration_en": "Full Day", "price_he": "",
+   "highlights_he": ["מצדה", "עין גדי", "ים המלח"], "highlights_en": ["Masada", "Ein Gedi", "Dead Sea"]},
+  {"id": "galilee", "page_he": "/tiyul-galil",
+   "name_he": "סיור בגליל", "name_en": "Galilee Tour", "duration_he": "יום שלם", "duration_en": "Full Day", "price_he": "",
+   "highlights_he": ["כנרת", "צפת", "ראש הנקרה"], "highlights_en": ["Sea of Galilee", "Safed", "Rosh Hanikra"]},
+  {"id": "tel_aviv", "page_he": "",
+   "name_he": "תל אביב ויפו", "name_en": "Tel Aviv & Jaffa", "duration_he": "חצי יום", "duration_en": "Half Day", "price_he": "",
+   "highlights_he": ["יפו העתיקה", "נמל תל אביב", "שוק הכרמל"], "highlights_en": ["Old Jaffa", "Tel Aviv Port", "Carmel Market"]},
+  {"id": "negev", "page_he": "",
+   "name_he": "הנגב והמכתש", "name_en": "Negev & Crater", "duration_he": "יום שלם", "duration_en": "Full Day", "price_he": "",
+   "highlights_he": ["מכתש רמון", "עבדת", "שדה בוקר"], "highlights_en": ["Ramon Crater", "Avdat", "Sde Boker"]},
+  {"id": "haifa", "page_he": "",
+   "name_he": "חיפה והכרמל", "name_en": "Haifa & Carmel", "duration_he": "חצי יום", "duration_en": "Half Day", "price_he": "",
+   "highlights_he": ["גני בהאי", "סטלה מאריס", "הכרמל"], "highlights_en": ["Bahai Gardens", "Stella Maris", "Carmel Mountain"]},
+  {"id": "hebron", "page_he": "",
+   "name_he": "סיור חברון וקרית ארבע", "name_en": "Hebron & Kiryat Arba Tour", "duration_he": "יום שלם", "duration_en": "Full Day", "price_he": "",
+   "highlights_he": ["מערת המכפלה", "קרית ארבע", "ליווי חמוש"], "highlights_en": ["Cave of the Patriarchs", "Kiryat Arba", "Armed Security Guide"]},
+  {"id": "tractors", "page_he": "",
+   "name_he": "טיול טרקטורונים", "name_en": "ATV & Buggy Adventure", "duration_he": "2-4 שעות", "duration_en": "2-4 Hours",
+   "price_he": "325-520 ₪ לאדם (לא כולל הסעה)",
+   "highlights_he": ["הרפתקה במדבר", "325-520 ₪ לאדם", "לא כולל הסעה"], "highlights_en": ["Desert Adventure", "₪325-520 per person", "Transportation not included"]}
+]

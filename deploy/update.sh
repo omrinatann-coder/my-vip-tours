@@ -11,5 +11,6 @@ REL="$WEB/releases/$(date +%Y%m%d%H%M%S)"
 mkdir -p "$REL"
 cp -a dist/. "$REL/"
 ln -sfn "$REL" "$WEB/current.tmp" && mv -T "$WEB/current.tmp" "$WEB/current"
+nginx -t -q && systemctl reload nginx   # picks up the new redirects.map
 ls -1dt "$WEB"/releases/* | tail -n +6 | xargs -r rm -rf   # keep 5 releases for rollback
 echo "Live: $REL"

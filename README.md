@@ -4,37 +4,26 @@
 
 ## מה יש באתר
 
-| עברית (הכתובות המקוריות) | אנגלית |
-|---|---|
-| `/` | `/en` |
-| `/ben-gurion-airport-transfers` | `/en/ben-gurion-airport-transfers` |
-| `/private-driver-israel` | `/en/private-driver-israel` |
-| `/israel-private-tours` (כולל רשימת הסיורים) | `/en/israel-private-tours` |
-| `/private-transportation-israel` | `/en/private-transportation-israel` |
-| `/accessible-transportation` | `/en/accessible-transportation` |
-| `/israel-family-transportation` | `/en/israel-family-transportation` |
-| `/19-passenger-minibus-israel` | `/en/19-passenger-minibus-israel` |
-| `/hasaot-iruvim` | `/en/hasaot-iruvim` |
-| `/fleet`: הצי | `/en/fleet` |
-| `/articles` + 6 מאמרים | `/en/articles` |
-| `/faq` (נוצר כשיש שאלות ב-`content/faq.json`) | `/en/faq` |
+60 עמודים ו-56 הפניות. **כל כתובת מהאתר הישן נשארת באותה שפה שהייתה לה**, כפי שעולה מהייצוא של Base44 מ-16/11/2026:
 
-**טופס הזמנה** בתחתית כל עמוד. הטופס בודק את שדות החובה ופותח וואטסאפ ל-054-283-1111 עם הודעה מוכנה. הפרטים לא נשמרים בשום מקום אחר.
-בנוסף, יש בכל עמוד כפתורים צפים לוואטסאפ ולשיחה.
+- **עמודים בעברית**: `/` (דף הבית), ‏`/hasaot-menatbag`, ‏`/nahag-prati`, ‏`/hasaot-beisrael`, ‏`/hasaot-iruvim`, ‏`/hasaot-chasuna`, ‏`/hasaot-bar-mitzva`, ‏`/minibus-hashara`, ‏`/accessible-transportation`, ‏`/monit-*` (3 מסלולים), ‏`/siur-yerushalayim`, ‏`/tiyul-*` (3 טיולים), ‏`/rechavim-memugnay-yeri`, ‏`/rechavei-yukra`, ‏`/hasaot-meforsamim`, ‏`/hasaot-<עיר>` (8 ערים), ‏`/blog`.
+- **עמודים באנגלית**: `/ben-gurion-airport-transfers`, ‏`/private-driver-israel`, ‏`/israel-private-tours`, ‏`/private-transportation-israel`, ‏`/israel-family-transportation`, ‏`/19-passenger-minibus-israel`, ‏`/israel-transportation-services`, ‏`/vip-transportation-israel`, ‏`/israel-vip-transportation-*` (4).
+- **עמודים חדשים**: `/en` (דף הבית באנגלית), ‏`/fleet`, ‏`/en/fleet`, ‏`/siurim-pratiyim`, ‏`/en/accessible-transportation`, ‏`/en/event-transportation`, ‏`/en/blog`, ו-6 מאמרים בכל שפה.
+- **עמוד שיש לו גרסה בשפה השנייה** מקושר אליה (hreflang), למשל `/nahag-prati` ↔ `/private-driver-israel`.
+- **הבלוג הישן**: המאמר המלא "הסעה מנתב״ג לירושלים" נשאר בכתובת המקורית שלו. 52 המאמרים הקצרים והחוזרים מפנים (301) לעמוד הקרוב להם בנושא. גם `/Home`, ‏`/AdminPanel`, ‏`/ConfirmBooking` ו-`/ServiceAreas` מפנים. הרשימה המלאה נמצאת ב-`content/legacy.py`.
 
-**קידום אורגני (SEO)**: לכל עמוד יש title ו-description ייחודיים, ‏canonical, ‏hreflang לעברית ולאנגלית, תגי Open Graph ונתונים מובנים (LocalBusiness, ‏Service, ‏Article, ‏BreadcrumbList, ‏FAQPage, ודירוג ממוצע כשיש ביקורות). נוצרים גם `sitemap.xml` עם חלופות שפה ו-`robots.txt`, ולכל עמוד יש כתובת אחת בלבד: בלי `.html` ובלי `/` בסוף, ו-www מפנה לכתובת בלי www.
+**טופס הזמנה** בתחתית כל עמוד. הטופס בודק את שדות החובה ופותח וואטסאפ ל-054-283-1111 עם הודעה מוכנה. בנוסף יש כפתורים צפים לוואטסאפ ולשיחה.
+
+**קידום אורגני (SEO)**: לכל עמוד יש title ו-description ייחודיים, ‏canonical, ‏hreflang כשיש גרסה בשפה השנייה, ונתונים מובנים (LocalBusiness, ‏Service, ‏Article, ‏BreadcrumbList, ‏FAQPage). נוצרים גם `sitemap.xml` ו-`robots.txt`. לכל עמוד יש כתובת אחת בלבד: בלי `.html`, בלי `/` בסוף, ו-www מפנה לכתובת בלי www.
 
 ## עריכת תוכן
 
-הכול בתיקייה `content/` (הסבר מפורט ב-[content/README.md](content/README.md)):
-
-- `reviews.json`, ‏`tours.json`, ‏`faq.json`: **להשלים מהאתר הישן**. הקבצים ריקים כרגע, וכל עוד קובץ ריק, האזור שלו לא מוצג באתר.
-- `services.py`: טקסטים של עמודי השירות. `articles.py`: מאמרים. `business.py`: טלפון, הצי וטקסטים של הממשק.
+הכול בתיקייה `content/` (הסבר ב-[content/README.md](content/README.md)).
 
 בדיקה מקומית:
 ```bash
 python3 build.py --serve      # http://127.0.0.1:8080
-python3 tests/check.py        # כל הכתובות הישנות קיימות, אין קישורים שבורים, ותגי SEO תקינים
+python3 tests/check.py        # כל 44 הכתובות ו-53 המאמרים הישנים מכוסים, אין קישורים שבורים, SEO תקין
 ```
 אין תלויות: מספיק Python 3.9 ומעלה.
 

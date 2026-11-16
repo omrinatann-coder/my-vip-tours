@@ -4,6 +4,8 @@ SITE_URL = "https://my-vip-tours.com"
 BRAND = "Tour VIP"
 PHONE_DISPLAY = "054-283-1111"
 PHONE_INTL = "+972542831111"
+PHONE2_DISPLAY = "02-625-7227"
+PHONE2_INTL = "+97226257227"
 WHATSAPP = "972542831111"
 
 LANGS = ("he", "en")
@@ -60,7 +62,7 @@ UI = {
         "wa_intro": "שלום, אני רוצה להזמין נסיעה:",
         "seats": "מקומות", "seats_ask": "לפי הרכב",
         "suitable": "רכבים מתאימים", "read_more": "להמשך קריאה", "related": "עוד באתר",
-        "all_services": "כל השירותים", "updated": "עודכן",
+        "all_services": "עוד שירותים", "cities": "הסעות לפי עיר", "travelers": "", "updated": "עודכן",
         "reviews_title": "מה הלקוחות אומרים", "tours_title": "הסיורים שלנו", "faq_title": "שאלות נפוצות",
         "duration": "משך", "price": "מחיר",
         "contact": "יצירת קשר", "available": "זמינים בטלפון ובוואטסאפ",
@@ -84,7 +86,7 @@ UI = {
         "wa_intro": "Hello, I would like to book a ride:",
         "seats": "seats", "seats_ask": "varies",
         "suitable": "Suitable vehicles", "read_more": "Read more", "related": "More on the site",
-        "all_services": "All services", "updated": "Updated",
+        "all_services": "More services", "cities": "", "travelers": "Travelers from abroad", "updated": "Updated",
         "reviews_title": "What our customers say", "tours_title": "Our tours", "faq_title": "Frequently asked questions",
         "duration": "Duration", "price": "Price",
         "contact": "Contact", "available": "Available by phone and WhatsApp",
