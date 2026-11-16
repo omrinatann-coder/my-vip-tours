@@ -171,7 +171,7 @@ def layout(p, main, ld=(), og_type="website", noindex=False):
 <meta property="og:description" content="{E(p["desc"])}">
 <meta property="og:url" content="{canon}">
 <meta property="og:locale" content="{"he_IL" if lang == "he" else "en_US"}">
-<meta name="theme-color" content="#0f1b2d">
+<meta name="theme-color" content="#111827">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <style>{CSS}</style>
 {lds}
@@ -324,8 +324,8 @@ def hero(lang, h1, lead, small=False):
     return f"""<section class="hero{" small" if small else ""}"><div class="wrap">
 <h1>{E(h1)}</h1><p class="lead">{E(lead)}</p>
 <div class="ctas"><a class="btn" href="#book">{t(lang, "book")}</a>
-<a class="btn ghost" href="https://wa.me/{B.WHATSAPP}">{icon("wa")} {t(lang, "whatsapp")}</a>
-<a class="btn ghost" href="tel:{B.PHONE_INTL}" dir="ltr">{icon("phone")} {B.PHONE_DISPLAY}</a></div>
+<a class="btn wa" href="https://wa.me/{B.WHATSAPP}">{icon("wa")} {t(lang, "whatsapp")}</a>
+<a class="btn tel" href="tel:{B.PHONE_INTL}" dir="ltr">{icon("phone")} {B.PHONE_DISPLAY}</a></div>
 </div></section>"""
 
 
@@ -405,7 +405,12 @@ def home(lang):
                     "/private-transportation-israel", "/israel-family-transportation", "/19-passenger-minibus-israel",
                     "/vip-transportation-israel", "/en/event-transportation", "/en/accessible-transportation"]
         arts = ["/en/blog/ben-gurion-transfer-guide", "/en/blog/choosing-vehicle-size", "/en/blog/private-day-tours-from-tel-aviv"]
-    main = (hero(lang, p["h1"], p["lead"])
+    banner = ""
+    if (ROOT / "assets" / "img" / "hero-banner.webp").exists():
+        alt = "TOUR VIP — הסעות, טיולים ושירותי VIP בכל רחבי ישראל" if lang == "he" else "TOUR VIP — transfers, tours and VIP services across Israel"
+        banner = (f'<div class="banner"><img src="/assets/img/hero-banner.webp" alt="{E(alt)}" '
+                  'width="1536" height="1024" fetchpriority="high"></div>')
+    main = (banner + hero(lang, p["h1"], p["lead"])
             + f'<section class="wrap sec"><h2>{t(lang, "services")}</h2>{page_cards(featured)}</section>'
             + f'<div class="wrap">{tour_block(lang)}</div>'
             + f'<section class="wrap sec"><h2>{t(lang, "fleet")}</h2>{fleet_cards(lang)}</section>'
@@ -560,6 +565,8 @@ def build():
     (DIST / "404.html").write_text(not_found(), encoding="utf-8")
     (DIST / "assets" / "site.js").write_bytes(JS_BYTES)
     shutil.copy(ROOT / "assets" / "favicon.svg", DIST / "favicon.svg")
+    if (ROOT / "assets" / "img").is_dir():
+        shutil.copytree(ROOT / "assets" / "img", DIST / "assets" / "img")
     # nginx `map $uri $redirect_to { include .../redirects.map; }`
     (DIST / "redirects.map").write_text("".join(f"{o} {n};\n" for o, n in sorted(REDIRECTS.items())), encoding="utf-8")
 
